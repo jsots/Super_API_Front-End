@@ -1,5 +1,4 @@
 import React from "react";
-import { HeroImage } from './Heroes.jsx'
 import Filters from './Filters.jsx'
 
 import './App.css';

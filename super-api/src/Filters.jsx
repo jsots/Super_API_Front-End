@@ -95,6 +95,7 @@ export default function Filters() {
     <>
       <div>
         <h1>Superheroes</h1>
+        <div className="filterOpts">
         <form>
           <label>
             Alignment:
@@ -136,7 +137,7 @@ export default function Filters() {
           </label>
           <br />
           <label>
-            Powerstats:
+            <h4 className="stats">Powerstats:</h4>
             <br />
             Intelligence:
             <select
@@ -206,10 +207,11 @@ export default function Filters() {
           </label>
         </form>
       </div>
-      <ul>
+      </div>
+      <ul className="list">
         {filteredHeroes.length > 0 ? (
           filteredHeroes.map((hero) => (
-            <div key={hero.id} onClick={() => handleHeroClick(hero.id)}>
+            <div className="Chars" key={hero.id} onClick={() => handleHeroClick(hero.id)}>
              <img src={hero.images.lg} height="300px"></img>
              <br />
               {hero.name} 

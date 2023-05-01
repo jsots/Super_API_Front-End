@@ -1,8 +1,6 @@
 import React from "react";
-import { BrowserRouter } from 'react-router-dom'
-import { ReactDOM } from "react-dom";
+import { HeroImage } from './Heroes.jsx'
 import Filters from './Filters.jsx'
-import { useHistory } from 'react-router-dom'
 
 import './App.css';
 

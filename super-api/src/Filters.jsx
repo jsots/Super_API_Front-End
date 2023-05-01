@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import heroesData from "./superheroes.json";
 
 export default function Filters() {
@@ -39,16 +38,17 @@ export default function Filters() {
       }));
     }
   };
-
   const filteredHeroes = heroes.filter((hero) => {
-    const { alignment, gender, publisher } = filter;
+    const { gender, alignment, publisher } = filter;
+
     if (
-      (alignment && hero.biography.alignment !== alignment) ||
       (gender && hero.appearance.gender !== gender) ||
+      (alignment && hero.biography.alignment !== alignment) ||
       (publisher && hero.biography.publisher !== publisher)
     ) {
       return false;
     }
+    
 
     const {
       intelligence: intelligenceFilter,
@@ -78,6 +78,7 @@ export default function Filters() {
     return true;
   });
 
+  
   const handleHeroClick = (heroId) => {
     setHeroes(prevHeroes => {
       const heroIndex = prevHeroes.findIndex(hero => hero.id === heroId);
@@ -209,7 +210,9 @@ export default function Filters() {
         {filteredHeroes.length > 0 ? (
           filteredHeroes.map((hero) => (
             <div key={hero.id} onClick={() => handleHeroClick(hero.id)}>
-              {hero.name}
+             <img src={hero.images.lg} height="300px"></img>
+             <br />
+              {hero.name} 
             </div>
           ))
         ) : (

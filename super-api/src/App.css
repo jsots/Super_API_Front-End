@@ -12,7 +12,7 @@ container {
   position: fixed;
   background: rgba(0, 255, 21, 0.552);
   align-items: center;
-  padding: 10% 0 10% 0;
+  padding: 5% 0 5% 0;
   width: 15%;
   grid-area: 1 / 1 / 8 / 1; 
   }
@@ -23,11 +23,15 @@ container {
 }
 
 h4 {
-  font-size: 1.25em;
-
+  font-size: 1.4em;
+  font-weight:400;
 }
 
 .filterOpts > label, form, select {
+  font-size: 1.2rem;
+}
+
+.filterOpts > label, form, select, h4 {
   width: 80%;
   justify-content: center;
   padding: 10px;
@@ -37,19 +41,24 @@ h4 {
 
 h1 {
   padding: 10px;
-  margin: auto;
+  margin-top: 2%;
   justify-content: center;
+  font-size: 2.5em;
   display: grid;
   position: fixed;
   color: black;
+  font-family: "ActionComBlk";
+
+
+
 }
 
 .header {
   display: grid;
-  top: 0;
+  font-size: 32px;
   justify-content: center;
-  font-size: 3em;
   grid-area: 2 / 3 / 1 / 6;
+
 }
 
 .list {
@@ -61,5 +70,15 @@ h1 {
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   max-width: 75vw;
+}
 
+img {
+  border:solid 2px #000;
+  box-shadow:0 6px 6px -6px #00000075;
+}
+
+img:hover {
+  box-shadow: 0 0 -6px 0 #00000075; 
+  width: 98%;
+  height:auto;
 }

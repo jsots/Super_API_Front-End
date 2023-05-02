@@ -95,43 +95,41 @@ export default function Filters() {
     <>
     <container>
       <div>
-       <div className="header"><h1>Character Collective</h1></div>
+       <div className="header"><h1>CHARACTERS</h1></div>
         <div className="filterOpts">
         <form>
+          <h4>Filters:</h4>
           <label>
-            Alignment:
             <select
               name="alignment"
               value={filter.alignment}
               onChange={handleFilterChange}
             >
-              <option value=""></option>
+              <option value="">Alignment</option>
               <option value="good">Good</option>
               <option value="bad">Bad</option>
             </select>
           </label>
           <br />
           <label>
-            Gender:
             <select
-              name="appearance.gender"
+              name="gender"
               value={filter.appearance?.gender}
               onChange={handleFilterChange}
             >
-              <option value=""></option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
+              <option value="">Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
             </select>
           </label>
           <br />
           <label>
-            Publisher:
             <select
               name="publisher"
               value={filter.publisher}
               onChange={handleFilterChange}
             >
-              <option value=""></option>
+              <option value="">Publisher</option>
               <option value="DC Comics">DC Comics</option>
               <option value="Marvel Comics">Marvel Comics</option>
             </select>

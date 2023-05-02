@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './SignUp.css';
-import jwtDecode from 'jwt-decode';
 import { useNavigate } from 'react-router-dom';
 import { signUp } from '../services/users';
 
@@ -26,16 +25,17 @@ const SignUp = ({ setUser }) => {
   const onSignUp = async (event) => {
     event.preventDefault();
     try {
-      const user = await signUp(form);
+      const user = await signUp({
+        username: form.username,
+        email: form.email,
+        password: form.password,
+      });
       setUser(user);
       navigate('/');
     } catch (error) {
       console.error(error);
       setForm({
-        username: '',
-        email: '',
-        password: '',
-        passwordConfirmation: '',
+        ...form,
         isError: true,
         errorMsg: 'Sign Up Details Invalid',
       });

@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { Routes, Route } from "react-router-dom";
 import Home from "./screens/Home.jsx";
 import Nav from "./components/Nav.jsx";
 import Characters from "./screens/Characters.jsx";
@@ -6,15 +8,15 @@ import CreateCharacter from "./screens/CreateCharacter.jsx";
 import EditCharacter from "./screens/EditCharacter.jsx";
 import Sidebar from "./components/Sidebar.jsx";
 import Celeste from "./screens/Celeste.jsx";
-import { Routes, Route } from "react-router-dom";
-import "./App.css";
 import SignIn from "./screens/SignIn.jsx";
 import SignUp from "./screens/SignUp.jsx";
 
 function App() {
+  const [user, setUser] = useState(null);
+
   return (
     <div>
-      <Nav />
+      <Nav user={user} setUser={setUser} />
       <Sidebar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -23,8 +25,8 @@ function App() {
         <Route path="/add-character" element={<CreateCharacter />} />
         <Route path="/character/:id/edit" element={<EditCharacter />} />
         <Route path="/Celeste" element={<Celeste />} />
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="/signin" element={<SignIn onSignIn={setUser} />} />
+        <Route path="/signup" element={<SignUp setUser={setUser} />} />
       </Routes>
     </div>
   );

@@ -10,6 +10,7 @@ import Sidebar from "./components/Sidebar.jsx";
 import Celeste from "./screens/Celeste.jsx";
 import SignIn from "./screens/SignIn.jsx";
 import SignUp from "./screens/SignUp.jsx";
+import SignOut from "./screens/SignOut.jsx"
 
 function App() {
   const [user, setUser] = useState(null);
@@ -27,6 +28,7 @@ function App() {
         <Route path="/Celeste" element={<Celeste />} />
         <Route path="/signin" element={<SignIn onSignIn={setUser} />} />
         <Route path="/signup" element={<SignUp setUser={setUser} />} />
+        <Route path="/signout" element={<SignOut onSignOut={setUser} />} />
       </Routes>
     </div>
   );

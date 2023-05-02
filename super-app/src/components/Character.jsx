@@ -6,7 +6,7 @@ export default function Character({char}) {
   return (
     <div>
       <Link to={`/characters/${char._id}`}>
-        <img className="char-image" src={char.images} alt={char.name} /> 
+       {char.images && <img className="char-image" src={char.images.sm} alt={char.name} />} 
       </Link>
     </div>
   )

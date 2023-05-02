@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/characters" element={<Characters />} />
-          <Route path="/character/:id" element={<DetailCharacter />} />
+          <Route path="/characters/:id" element={<DetailCharacter />} />
           <Route path="/add-character" element={<CreateCharacter />} />
           <Route path="/character/:id/edit" element={<EditCharacter />} />
           <Route path="/Celeste" element={<Celeste />} />

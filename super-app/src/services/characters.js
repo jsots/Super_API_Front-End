@@ -12,7 +12,7 @@ export const getCharacters = async () => {
 
 export const getCharacter = async (id) => {
   try {
-    const response = await api.get(`/characters/name/${id}`);
+    const response = await api.get(`/characters/${id}`);
     return response.data;
   } catch (error) {
     console.error(`Failed to get character - error: ${error}`);

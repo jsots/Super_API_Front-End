@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import './SignUp.css';
-import { useNavigate } from 'react-router-dom';
-import { signUp } from '../services/users';
+import { useState } from 'react'
+import './SignUp.css'
+import { signUp } from '../../services/users'
+import { useNavigate } from 'react-router-dom'
 
-const SignUp = ({ setUser }) => {
-  const navigate = useNavigate();
+const SignUp = (props) => {
+  const navigate = useNavigate()
 
   const [form, setForm] = useState({
     username: '',
@@ -13,49 +13,48 @@ const SignUp = ({ setUser }) => {
     passwordConfirmation: '',
     isError: false,
     errorMsg: '',
-  });
+  })
 
-  const handleChange = (event) => {
+  const handleChange = (event) =>
     setForm({
       ...form,
       [event.target.name]: event.target.value,
-    });
-  };
+    })
 
   const onSignUp = async (event) => {
-    event.preventDefault();
+    event.preventDefault()
+    const { setUser } = props
     try {
-      const user = await signUp({
-        username: form.username,
-        email: form.email,
-        password: form.password,
-      });
-      setUser(user);
-      navigate('/');
+      const user = await signUp(form)
+      setUser(user)
+      navigate('/')
     } catch (error) {
-      console.error(error);
+      console.error(error)
       setForm({
-        ...form,
+        username: '',
+        email: '',
+        password: '',
+        passwordConfirmation: '',
         isError: true,
         errorMsg: 'Sign Up Details Invalid',
-      });
+      })
     }
-  };
+  }
 
   const renderError = () => {
-    const toggleForm = form.isError ? 'danger' : '';
+    const toggleForm = form.isError ? 'danger' : ''
     if (form.isError) {
       return (
         <button type='submit' className={toggleForm}>
           {form.errorMsg}
         </button>
-      );
+      )
     } else {
-      return <button type='submit'>Sign Up</button>;
+      return <button type='submit'>Sign Up</button>
     }
-  };
+  }
 
-  const { username, email, password, passwordConfirmation } = form;
+  const { username, email, password, passwordConfirmation } = form
 
   return (
     <div className='form-container'>
@@ -100,7 +99,7 @@ const SignUp = ({ setUser }) => {
         {renderError()}
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default SignUp;
+export default SignUp

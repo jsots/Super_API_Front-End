@@ -1,10 +1,11 @@
-import { useState } from 'react'
-import './SignUp.css'
-import { signUp } from '../../services/users'
-import { useNavigate } from 'react-router-dom'
+import { useState } from 'react';
+import './SignUp.css';
+import jwtDecode from 'jwt-decode';
+import { useNavigate } from 'react-router-dom';
+import { signUp } from '../services/users';
 
-const SignUp = (props) => {
-  const navigate = useNavigate()
+const SignUp = ({ setUser }) => {
+  const navigate = useNavigate();
 
   const [form, setForm] = useState({
     username: '',
@@ -13,23 +14,23 @@ const SignUp = (props) => {
     passwordConfirmation: '',
     isError: false,
     errorMsg: '',
-  })
+  });
 
-  const handleChange = (event) =>
+  const handleChange = (event) => {
     setForm({
       ...form,
       [event.target.name]: event.target.value,
-    })
+    });
+  };
 
   const onSignUp = async (event) => {
-    event.preventDefault()
-    const { setUser } = props
+    event.preventDefault();
     try {
-      const user = await signUp(form)
-      setUser(user)
-      navigate('/')
+      const user = await signUp(form);
+      setUser(user);
+      navigate('/');
     } catch (error) {
-      console.error(error)
+      console.error(error);
       setForm({
         username: '',
         email: '',
@@ -37,24 +38,24 @@ const SignUp = (props) => {
         passwordConfirmation: '',
         isError: true,
         errorMsg: 'Sign Up Details Invalid',
-      })
+      });
     }
-  }
+  };
 
   const renderError = () => {
-    const toggleForm = form.isError ? 'danger' : ''
+    const toggleForm = form.isError ? 'danger' : '';
     if (form.isError) {
       return (
         <button type='submit' className={toggleForm}>
           {form.errorMsg}
         </button>
-      )
+      );
     } else {
-      return <button type='submit'>Sign Up</button>
+      return <button type='submit'>Sign Up</button>;
     }
-  }
+  };
 
-  const { username, email, password, passwordConfirmation } = form
+  const { username, email, password, passwordConfirmation } = form;
 
   return (
     <div className='form-container'>
@@ -99,7 +100,7 @@ const SignUp = (props) => {
         {renderError()}
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default SignUp
+export default SignUp;

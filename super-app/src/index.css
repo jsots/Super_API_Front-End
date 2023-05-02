@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "ActionComBlk";
+  src: local("ActionComBlk"),
+   url("./fonts/ActionComBlk.ttf") format("truetype");
+ }
+
+ @font-face {
+  font-family: "ActionComLine";
+  src: local("ActionComLine"),
+   url("./fonts/ActionComLine.ttf") format("truetype");
+ }
+
+ @font-face {
+  font-family: "Wavemax";
+  src: local("Wavemax"),
+   url("./fonts/Wavemax.ttf") format("truetype");
+ }

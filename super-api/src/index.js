@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import './fonts/ActionComBlk.ttf'
 import './fonts/ActionComLine.ttf'
+import './fonts/Wavemax.ttf'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

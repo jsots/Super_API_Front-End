@@ -17,9 +17,9 @@ container {
   grid-area: 1 / 1 / 8 / 1; 
   }
   
- p {
-  font-stretch: expanded;
-  font-size: 16px;
+p {
+  font-size: 24px;
+  font-family: "Wavemax";
 }
 
 h4 {
@@ -47,7 +47,7 @@ h1 {
   display: grid;
   position: fixed;
   color: black;
-  font-family: "ActionComBlk";
+  font-family: "ActionComLine";
 
 
 

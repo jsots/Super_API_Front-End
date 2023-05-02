@@ -23,3 +23,9 @@ code {
   src: local("ActionComLine"),
    url("./fonts/ActionComLine.ttf") format("truetype");
  }
+
+ @font-face {
+  font-family: "Wavemax";
+  src: local("Wavemax"),
+   url("./fonts/Wavemax.ttf") format("truetype");
+ }

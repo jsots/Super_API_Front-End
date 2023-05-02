@@ -93,8 +93,9 @@ export default function Filters() {
 
   return (
     <>
+    <container>
       <div>
-        <h1>Superheroes</h1>
+       <div className="header"><h1>Character Collective</h1></div>
         <div className="filterOpts">
         <form>
           <label>
@@ -137,7 +138,7 @@ export default function Filters() {
           </label>
           <br />
           <label>
-            <h4 className="stats">Powerstats:</h4>
+            <h4>Powerstats:</h4>
             <br />
             Intelligence:
             <select
@@ -212,15 +213,16 @@ export default function Filters() {
         {filteredHeroes.length > 0 ? (
           filteredHeroes.map((hero) => (
             <div className="Chars" key={hero.id} onClick={() => handleHeroClick(hero.id)}>
-             <img src={hero.images.lg} height="300px"></img>
+              <img src={hero.images.lg} height="300px"></img>
              <br />
-              {hero.name} 
+              <p>{hero.name} </p>
             </div>
           ))
         ) : (
           <div>No heroes found</div>
         )}
       </ul>
+      </container>
     </>
   );
 }

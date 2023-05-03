@@ -17,6 +17,7 @@ export default function Characters() {
 
   useEffect(() => {
     fetchChars();
+    handleSort("name-ascending"); 
   }, []);
 
   const handleSort = (type) => {
@@ -38,7 +39,6 @@ export default function Characters() {
 
   const handleSubmit = (event) => event.preventDefault()
 
-  // Create a new variable to hold the sorted characters based on the selected sort type
   const sortedChars = applySort ? chars : chars.slice().reverse();
 
   return (

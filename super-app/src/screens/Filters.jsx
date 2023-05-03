@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
-import heroesData from "./superheroes.json";
+import { getCharacters } from '../services/characters.js';
+import Character from '../components/Character.jsx';
+import characters from '../characters.json'
+
 
 export default function Filters() {
-  const [heroes, setHeroes] = useState([]);
+  const [chars, setChars] = useState([])
   const [filter, setFilter] = useState([]);
   const [powerstatsFilter, setPowerstatsFilter] = useState({
     intelligence: "",
@@ -12,9 +15,12 @@ export default function Filters() {
     power: "",
     combat: "",
   });
-
+  const fetchChars = async () => {
+    const allChars = await getCharacters()
+    setChars(allChars)
+  }
   useEffect(() => {
-    setHeroes(heroesData);
+    fetchChars();
   }, []);
 
   const handleFilterChange = (event) => {
@@ -38,13 +44,13 @@ export default function Filters() {
       }));
     }
   };
-  const filteredHeroes = heroes.filter((hero) => {
+  const filteredChars = characters.filter((char) => {
     const { gender, alignment, publisher } = filter;
 
     if (
-      (gender && hero.appearance.gender !== gender) ||
-      (alignment && hero.biography.alignment !== alignment) ||
-      (publisher && hero.biography.publisher !== publisher)
+      (gender && char.appearance.gender !== gender) ||
+      (alignment && char.biography.alignment !== alignment) ||
+      (publisher && char.biography.publisher !== publisher)
     ) {
       return false;
     }
@@ -59,18 +65,18 @@ export default function Filters() {
       combat: combatFilter,
     } = powerstatsFilter;
     if (
-      (intelligenceFilter === "less" && hero.powerstats.intelligence >= 50) ||
-      (intelligenceFilter === "greater" && hero.powerstats.intelligence < 50) ||
-      (strengthFilter === "less" && hero.powerstats.strength >= 50) ||
-      (strengthFilter === "greater" && hero.powerstats.strength < 50) ||
-      (speedFilter === "less" && hero.powerstats.speed >= 50) ||
-      (speedFilter === "greater" && hero.powerstats.speed < 50) ||
-      (durabilityFilter === "less" && hero.powerstats.durability >= 50) ||
-      (durabilityFilter === "greater" && hero.powerstats.durability < 50) ||
-      (powerFilter === "less" && hero.powerstats.power >= 50) ||
-      (powerFilter === "greater" && hero.powerstats.power < 50) ||
-      (combatFilter === "less" && hero.powerstats.combat >= 50) ||
-      (combatFilter === "greater" && hero.powerstats.combat < 50)
+      (intelligenceFilter === "less" && char.powerstats.intelligence >= 50) ||
+      (intelligenceFilter === "greater" && char.powerstats.intelligence < 50) ||
+      (strengthFilter === "less" && char.powerstats.strength >= 50) ||
+      (strengthFilter === "greater" && char.powerstats.strength < 50) ||
+      (speedFilter === "less" && char.powerstats.speed >= 50) ||
+      (speedFilter === "greater" && char.powerstats.speed < 50) ||
+      (durabilityFilter === "less" && char.powerstats.durability >= 50) ||
+      (durabilityFilter === "greater" && char.powerstats.durability < 50) ||
+      (powerFilter === "less" && char.powerstats.power >= 50) ||
+      (powerFilter === "greater" && char.powerstats.power < 50) ||
+      (combatFilter === "less" && char.powerstats.combat >= 50) ||
+      (combatFilter === "greater" && char.powerstats.combat < 50)
     ) {
       return false;
     }
@@ -79,14 +85,14 @@ export default function Filters() {
   });
 
   
-  const handleHeroClick = (heroId) => {
-    setHeroes(prevHeroes => {
-      const heroIndex = prevHeroes.findIndex(hero => hero.id === heroId);
-      const updatedHero = {...prevHeroes[heroIndex], selected: true};
+  const handleCharClick = (heroId) => {
+    setChars(prevChars => {
+      const heroIndex = prevChars.findIndex(char => char.id === heroId);
+      const updatedChar = {...prevChars[heroIndex], selected: true};
       return [
-        ...prevHeroes.slice(0, heroIndex),
-        updatedHero,
-        ...prevHeroes.slice(heroIndex + 1),
+        ...prevChars.slice(0, heroIndex),
+        updatedChar,
+        ...prevChars.slice(heroIndex + 1),
       ];
     });
   };
@@ -208,16 +214,19 @@ export default function Filters() {
       </div>
       </div>
       <ul className="list">
-        {filteredHeroes.length > 0 ? (
-          filteredHeroes.map((hero) => (
-            <div className="Chars" key={hero.id} onClick={() => handleHeroClick(hero.id)}>
-              <img src={hero.images.lg} height="300px"></img>
+        {filteredChars.length > 0 ? (
+          filteredChars.map((char) => (
+            <Character key={char.id} onClick={() => handleCharClick(char.id)}>
+              <img src={char.images.lg} height="300px"></img>
              <br />
-              <p>{hero.name} </p>
-            </div>
+             {chars.map((char) => (
+        <Character key={char._id} char={char} />
+        ))}
+              <p>{char.name} </p>
+            </Character>
           ))
         ) : (
-          <div>No heroes found</div>
+          <div>No characters found</div>
         )}
       </ul>
       </container>

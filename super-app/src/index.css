@@ -25,7 +25,19 @@ code {
  }
 
  @font-face {
-  font-family: "Wavemax";
-  src: local("Wavemax"),
-   url("./fonts/Wavemax.ttf") format("truetype");
+  font-family: "KTD";
+  src: local("KTD"),
+   url("./fonts/KTD.ttf") format("truetype");
+ }
+
+ @font-face {
+  font-family: "Comic";
+  src: local("Comic"),
+   url("./fonts/Comic.ttf") format("truetype");
+ }
+
+ @font-face {
+  font-family: "Grinch";
+  src: local("Grinch"),
+   url("./fonts/Comic.ttf") format("opentype");
  }

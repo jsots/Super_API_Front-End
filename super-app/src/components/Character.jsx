@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 export default function Character({char}) {
-    
     // if(char.images) console.log(char.images.sm)
   return (
     <div>

@@ -17,10 +17,12 @@ export default function Characters() {
 
   return (
     <div>
-      <h1>Celeste's Super!!!! What do they look like??? Its a surpsrise</h1>
-      {chars.map((char) => (
-        <Character key={char._id} char={char} />
-      ))}
+      <h1>Celeste Supers!</h1>
+      <div className="list">
+        {chars.map((char) => (
+            <Character key={char._id} char={char} />
+        ))}
+      </div>
     </div>
   )
 }

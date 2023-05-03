@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Routes, Route } from "react-router-dom";
+import { useState, useEffect } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Home from "./screens/Home.jsx";
 import Nav from "./components/Nav.jsx";
 import Characters from "./screens/Characters.jsx";
@@ -10,10 +10,20 @@ import Sidebar from "./components/Sidebar.jsx";
 import Celeste from "./screens/Celeste.jsx";
 import SignIn from "./screens/SignIn.jsx";
 import SignUp from "./screens/SignUp.jsx";
-import SignOut from "./screens/SignOut.jsx"
+import SignOut from "./screens/SignOut.jsx";
+import { verifyUser } from './services/users';
+
 
 function App() {
   const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const user = await verifyUser()
+      user ? setUser(user) : setUser(null)
+    }
+    fetchUser()
+  }, [])
 
   return (
     <div>

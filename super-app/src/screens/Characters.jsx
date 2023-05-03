@@ -7,7 +7,6 @@ import Sort from "../components/Sort.jsx";
 
 export default function Characters() {
   const [chars, setChars] = useState([]);
-  const [applySort, setApplySort] = useState(false);
   const [sortType, setSortType] = useState('');
 
   const fetchChars = async () => {

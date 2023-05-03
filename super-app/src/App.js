@@ -12,6 +12,7 @@ import SignIn from "./screens/SignIn.jsx";
 import SignUp from "./screens/SignUp.jsx";
 import SignOut from "./screens/SignOut.jsx";
 import { verifyUser } from './services/users';
+import "./App.css";
 
 
 
@@ -29,7 +30,6 @@ function App() {
   return (
     <div>
       <Nav user={user} setUser={setUser} />
-      <Sidebar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/characters" element={<Characters />} />

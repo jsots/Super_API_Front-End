@@ -1,38 +1,50 @@
-import Character from "../components/Character.jsx";
-import { useState, useEffect } from "react";
-import { getCharacters } from "../services/characters.js";
-import Sort, { AZ } from "../components/Sort.jsx";
+import Character from '../components/Character.jsx';
+import { useState, useEffect } from 'react';
+import { getCharacters } from '../services/characters.js';
+import { AZ, ZA } from "../utils/sort.js";
+import Sort from "../components/Sort.jsx";
+
 
 export default function Characters() {
   const [chars, setChars] = useState([]);
-  const [sortOrder, setSortOrder] = useState(undefined);
+  const [applySort, setApplySort] = useState(false);
+  const [sortType, setSortType] = useState('name-ascending');
 
   const fetchChars = async () => {
     const allChars = await getCharacters();
     setChars(allChars);
-  };
+  }
 
   useEffect(() => {
     fetchChars();
   }, []);
 
-  const handleSort = (sortFunc) => {
-    // Handle case where sortFunc is undefined
-    if (typeof sortFunc === 'function') {
-      setSortOrder(sortFunc);
-    } else {
-      console.error('Invalid sort function:', sortFunc);
+  const handleSort = (type) => {
+    if (type !== '' && type !== undefined) {
+      setSortType(type)
     }
+    switch (type) {
+      case 'name-ascending':
+        setChars(AZ(chars))
+        break
+      case 'name-descending':
+        setChars(ZA(chars))
+        break
+      default:
+        break
+    }
+    setApplySort(true)
   }
 
-  // Handle case where sortOrder is undefined
-  const sortedChars = sortOrder ? sortOrder([...chars]) : chars;
+  const handleSubmit = (event) => event.preventDefault()
+
+  // Create a new variable to hold the sorted characters based on the selected sort type
+  const sortedChars = applySort ? chars : chars.slice().reverse();
 
   return (
     <div>
       <h1>Celeste Supers!</h1>
-      <Sort handleSort={handleSort} sortOrder={sortOrder} chars={chars} />
-
+      <Sort onSubmit={handleSubmit} handleSort={handleSort} />
       <div className="list">
         {sortedChars.map((char) => (
           <Character key={char._id} char={char} />

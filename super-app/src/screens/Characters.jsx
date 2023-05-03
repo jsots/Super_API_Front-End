@@ -8,7 +8,7 @@ import Sort from "../components/Sort.jsx";
 export default function Characters() {
   const [chars, setChars] = useState([]);
   const [applySort, setApplySort] = useState(false);
-  const [sortType, setSortType] = useState('name-ascending');
+  const [sortType, setSortType] = useState('');
 
   const fetchChars = async () => {
     const allChars = await getCharacters();
@@ -17,29 +17,32 @@ export default function Characters() {
 
   useEffect(() => {
     fetchChars();
-    handleSort("name-ascending"); 
   }, []);
 
   const handleSort = (type) => {
-    if (type !== '' && type !== undefined) {
-      setSortType(type)
-    }
+    setSortType(type);
+  
     switch (type) {
       case 'name-ascending':
-        setChars(AZ(chars))
-        break
+        setChars(AZ(chars));
+        break;
       case 'name-descending':
-        setChars(ZA(chars))
-        break
+        setChars(ZA(chars));
+        break;
       default:
-        break
+        break;
     }
-    setApplySort(true)
-  }
-
+  };
+  
   const handleSubmit = (event) => event.preventDefault()
 
-  const sortedChars = applySort ? chars : chars.slice().reverse();
+  const sortedChars = chars.slice().sort((a, b) => {
+    if (sortType === 'name-ascending') {
+      return a.name.localeCompare(b.name);
+    } else {
+      return b.name.localeCompare(a.name);
+    }
+  });
 
   return (
     <div>

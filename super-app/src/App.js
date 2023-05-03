@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Home from "./screens/Home.jsx";
 import Nav from "./components/Nav.jsx";
 import Characters from "./screens/Characters.jsx";
@@ -16,7 +16,7 @@ import { verifyUser } from './services/users';
 
 function App() {
   const [user, setUser] = useState(null);
-
+  
   useEffect(() => {
     const fetchUser = async () => {
       const user = await verifyUser()

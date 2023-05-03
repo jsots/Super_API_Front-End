@@ -4,8 +4,8 @@ export default function Nav() {
   return (
     <nav>
       <NavLink to="/">Home</NavLink>
-      <NavLink to="/characters">All Supers</NavLink>
-      <NavLink to="/add-character">Add Super</NavLink>
+      <NavLink to="/characters">Characters</NavLink>
+      <NavLink to="/add-character">New Character</NavLink>
       <NavLink to="/Celeste">Meet Celeste</NavLink>
     </nav>
   )

@@ -14,6 +14,11 @@ export default function Characters() {
 
   useEffect(() => {
     fetchChars()
+    document.body.classList.add("chars")
+
+    return () => {
+      document.body.classList.remove("chars")
+    }
   }, [])
 
   return (

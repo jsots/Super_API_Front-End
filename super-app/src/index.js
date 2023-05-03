@@ -6,6 +6,8 @@ import './fonts/ActionComBlk.ttf'
 import './fonts/ActionComLine.ttf'
 import './fonts/Comic.ttf'
 import './fonts/Grinch.otf'
+import './fonts/pork.ttf'
+
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from "react-router-dom";
 

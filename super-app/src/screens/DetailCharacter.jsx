@@ -17,6 +17,11 @@ export default function DetailCat() {
 
   useEffect(() => {
     fetchCharacter()
+    document.body.classList.add("detail")
+
+    return () => {
+      document.body.classList.remove("detail")
+    }
   }, [])
 
   const handleEdit = () => {

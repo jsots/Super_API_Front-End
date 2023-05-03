@@ -1,9 +1,9 @@
 import React from 'react'
-
+import Characters from './Characters'
 function Home() {
   return (
     <div>
-      <h1>Celeste's Supers</h1>
+      <Characters />
     </div>
   )
 }

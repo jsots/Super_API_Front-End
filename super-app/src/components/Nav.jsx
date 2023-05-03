@@ -41,9 +41,6 @@ export default function Nav(props) {
           {user ? authenticatedOptions : unauthenticatedOptions}
         </div>
       </div>
-      {/* <NavLink to="/signin">Sign In</NavLink>
-      {user ? null : <NavLink to="/signup">Sign Up</NavLink>}
-      <NavLink to="/signout">Sign Out</NavLink> */}
     </nav>
   );
 }

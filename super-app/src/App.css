@@ -9,6 +9,12 @@
   background-size: 110%;
 }
 
+.links {
+  display: flex;
+  background: black;
+  justify-content: space-between;
+}
+
 p {
   font-size: 24px;
   font-family: "Arial";
@@ -29,6 +35,7 @@ nav a {
   text-decoration: none;
   background: black;
   padding-left: 50px;
+  padding-right: 50px;
 }
 
 a:hover {

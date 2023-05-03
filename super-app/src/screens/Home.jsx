@@ -5,8 +5,8 @@ import "./Home.css";
 function Home() {
   return (
     <div>
-      <article className="comic">
       <h1>Celestial Characters</h1>
+      <article className="comic">
   <div className="panel">
     <p className="text bottom-right"><a href="/characters">Characters</a></p>
   </div>

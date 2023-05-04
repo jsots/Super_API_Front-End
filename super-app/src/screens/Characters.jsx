@@ -7,7 +7,7 @@ import Sort from "../components/Sort.jsx";
 
 export default function Characters() {
   const [chars, setChars] = useState([]);
-  const [sortType, setSortType] = useState('');
+  const [sortType, setSortType] = useState('name-ascending'); // set default sort type to 'name-ascending'
 
   const fetchChars = async () => {
     const allChars = await getCharacters();
@@ -34,7 +34,7 @@ export default function Characters() {
   };
   
   const handleSubmit = (event) => event.preventDefault()
-
+  
   const sortedChars = chars.slice().sort((a, b) => {
     if (sortType === 'name-ascending') {
       return a.name.localeCompare(b.name);
@@ -42,6 +42,7 @@ export default function Characters() {
       return b.name.localeCompare(a.name);
     }
   });
+  
 
   return (
     <div>

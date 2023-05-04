@@ -25,6 +25,7 @@ const SignIn = (props) => {
     try {
       const user = await signIn(form);
       onSignIn(user);
+      localStorage.setItem("user", JSON.stringify(user));
       navigate('/');
     } catch (error) {
       console.error(error);

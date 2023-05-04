@@ -25,11 +25,11 @@ export default function DetailCat() {
 
   return (
     <div>
-      <h1>{character.name}</h1>
-      <div>
-        {character.images && <img src={character.images.sm} alt={character.name} />}
+      <h1 className="header">{character.name}</h1>
+      <div className="charImg">
+        {character.images && <img src={character.images.lg} alt={character.name} />}
       </div>
-      <div>
+      <span>
         <button onClick= {handleEdit}>
           Edit Super
         </button>
@@ -37,7 +37,7 @@ export default function DetailCat() {
           deleteCharacter(character._id)
           navigate("/character", {replace: true})
         }}>Delete Super</button>
-      </div>
+      </span>
       {edit && <EditCharacter setEdit={setEdit} />}
     </div>
   )

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Navigate, Route } from 'react-router-dom'
 import Home from "./screens/Home.jsx";
 import Nav from "./components/Nav.jsx";
 import Characters from "./screens/Characters.jsx";
@@ -12,6 +12,8 @@ import SignIn from "./screens/SignIn.jsx";
 import SignUp from "./screens/SignUp.jsx";
 import SignOut from "./screens/SignOut.jsx";
 import { verifyUser } from './services/users';
+import "./App.css";
+
 
 
 function App() {
@@ -28,7 +30,6 @@ function App() {
   return (
     <div>
       <Nav user={user} setUser={setUser} />
-      <Sidebar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/characters" element={<Characters />} />
@@ -38,7 +39,7 @@ function App() {
         <Route path="/Celeste" element={<Celeste />} />
         <Route path="/signin" element={<SignIn onSignIn={setUser} />} />
         <Route path="/signup" element={<SignUp setUser={setUser} />} />
-        <Route path="/signout" element={<SignOut onSignOut={setUser} />} />
+        <Route path="/signout" element={<SignOut setUser={setUser} />} />
       </Routes>
     </div>
   );

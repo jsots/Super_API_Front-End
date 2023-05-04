@@ -11,3 +11,68 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "ActionComBlk";
+  src: local("ActionComBlk"),
+   url("./fonts/ActionComBlk.ttf") format("truetype");
+ }
+
+ @font-face {
+  font-family: "ActionComLine";
+  src: local("ActionComLine"),
+   url("./fonts/ActionComLine.ttf") format("truetype");
+ }
+
+ @font-face {
+  font-family: "Bad";
+  src: local("Bad"),
+   url("./fonts/Bad.ttf") format("truetype");
+ }
+
+ @font-face {
+  font-family: "Comic";
+  src: local("Comic"),
+   url("./fonts/Comic.ttf") format("truetype");
+ }
+
+ @font-face {
+  font-family: "Grinch";
+  src: local("Grinch"),
+   url("./fonts/Comic.ttf") format("opentype");
+ }
+
+ @font-face {
+  font-family: "porky";
+  src: local("porky"),
+   url("./fonts/porky.ttf") format("truetype");
+ }
+
+ @font-face {
+  font-family: "porky2";
+  src: local("porky2"),
+   url("./fonts/porky2.ttf") format("truetype");
+ }
+
+ @font-face {
+  font-family: "Corp";
+  src: local("Corp"),
+   url("./fonts/Corp.ttf") format("truetype");
+ }
+
+ @font-face {
+  font-family: "Darling";
+  src: local("Darling"),
+   url("./fonts/Darling.ttf") format("truetype");
+ }
+
+ @font-face {
+  font-family: "Exp";
+  src: local("Exp"),
+   url("./fonts/Exp.ttf") format("truetype");
+ }
+ @font-face {
+  font-family: "Wavemax";
+  src: local("Wavemax"),
+   url("./fonts/Wavemax.ttf") format("truetype");
+ }

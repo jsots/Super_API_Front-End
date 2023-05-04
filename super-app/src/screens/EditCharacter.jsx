@@ -1,57 +1,57 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { updateCharacter, getCharacter } from '../services/characters.js';
+import { updateCharacter, getCharacter } from "../services/characters.js";
 
 export default function EditCat(props) {
-    const [character, setCharacter] = useState({
-        name: "",
-        powerstats: {
-            intelligence: "",
-            strength: "",
-            speed: "",
-            durability: "",
-            power: "",
-            combat: ""
-        },
-        appearance: {
-            gender: ""
-        },
-        biography: {
-            alignment: "",
-            publisher: ""
-        },
-        images: {
-            lg: ""
-        }
-      })
+  const [character, setCharacter] = useState({
+    name: "",
+    powerstats: {
+      intelligence: "",
+      strength: "",
+      speed: "",
+      durability: "",
+      power: "",
+      combat: "",
+    },
+    appearance: {
+      gender: "",
+    },
+    biography: {
+      alignment: "",
+      publisher: "",
+    },
+    images: {
+      lg: "",
+    },
+  });
 
-  let navigate = useNavigate()
-  let { id } = useParams()
+  let navigate = useNavigate();
+  let { id } = useParams();
 
   const fetchCharacter = async () => {
-    const oneCharacter = await getCharacter(id)
-    setCharacter(oneCharacter)
-  }
+    const oneCharacter = await getCharacter(id);
+    setCharacter(oneCharacter);
+  };
 
   useEffect(() => {
-    fetchCharacter()
-  }, [])
+    fetchCharacter();
+  }, []);
 
   const handleChange = (e) => {
-    const { name, value } = e.target
+    const { name, value } = e.target;
 
     setCharacter((prev) => ({
       ...prev,
-      [name]: value
-    }))
-  }
+      [name]: value,
+    }));
+  };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    await updateCharacter(id, character)
-    navigate(`/characters/${id}`, {replace: true})
-    props.setEdit(false)
-  }
+    e.preventDefault();
+    await updateCharacter(id, character);
+    navigate(`/characters/${id}`, { replace: true });
+    props.setEdit(false);
+  };
 
   return (
     <div>
@@ -64,7 +64,7 @@ export default function EditCat(props) {
           value={character.name}
           onChange={handleChange}
         />
-        <br/>
+        <br />
         Intelligence:
         <input
           placeholder="Enter intelligence"
@@ -72,7 +72,7 @@ export default function EditCat(props) {
           value={character.powerstats.intelligence}
           onChange={handleChange}
         />
-        <br/>
+        <br />
         Strength:
         <input
           placeholder="Enter strength"
@@ -80,7 +80,7 @@ export default function EditCat(props) {
           value={character.powerstats.strength}
           onChange={handleChange}
         />
-        <br/>
+        <br />
         Speed:
         <input
           placeholder="Enter speed"
@@ -88,7 +88,7 @@ export default function EditCat(props) {
           value={character.powerstats.speed}
           onChange={handleChange}
         />
-        <br/>
+        <br />
         Durability:
         <input
           placeholder="Enter durability (0-100)"
@@ -96,7 +96,7 @@ export default function EditCat(props) {
           value={character.powerstats.durability}
           onChange={handleChange}
         />
-        <br/>
+        <br />
         Power:
         <input
           placeholder="Enter power (0-100)"
@@ -104,7 +104,7 @@ export default function EditCat(props) {
           value={character.powerstats.power}
           onChange={handleChange}
         />
-        <br/>
+        <br />
         Combat:
         <input
           placeholder="Enter combat (0-100)"
@@ -112,7 +112,7 @@ export default function EditCat(props) {
           value={character.powerstats.combat}
           onChange={handleChange}
         />
-        <br/>
+        <br />
         Gender:
         <input
           placeholder="Enter gender (Male/Female)"
@@ -120,7 +120,7 @@ export default function EditCat(props) {
           value={character.appearance.gender}
           onChange={handleChange}
         />
-        <br/>
+        <br />
         Alignment:
         <input
           placeholder="Enter alignment (good/bad)"
@@ -128,7 +128,7 @@ export default function EditCat(props) {
           value={character.biography.alignment}
           onChange={handleChange}
         />
-        <br/>
+        <br />
         Publisher:
         <input
           placeholder="Publisher (Marvel Comics/DC Comics)"
@@ -136,7 +136,7 @@ export default function EditCat(props) {
           value={character.biography.publisher}
           onChange={handleChange}
         />
-        <br/>
+        <br />
         Image URL:
         <input
           placeholder="Enter image URL"
@@ -144,9 +144,9 @@ export default function EditCat(props) {
           value={character.images.lg}
           onChange={handleChange}
         />
-        <br/>
+        <br />
         <button type="submit">Submit Changes</button>
       </form>
     </div>
-  )
+  );
 }

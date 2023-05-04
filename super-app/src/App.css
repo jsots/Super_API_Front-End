@@ -8,11 +8,9 @@
 
 .form {
   height: 100vh;
-
-
 }
 
-.container {  
+.container {
   display: flex;
   height: 100vh;
 }
@@ -58,23 +56,28 @@ a:hover {
 
 h4 {
   display: flex;
-  margin: 0 50% 0 50%;
-  font-size: 1.75em;
-  font-weight:400;
-  font-family: "Exp";
   justify-content: center;
+  font-size: 1.25em;
+  font-family: "Exp";
 }
 
+select {
+  width: 80%;
+}
 h1 {
-  display: flex;
   justify-content: center;
   align-content: center;
   width: 100%;
-  font-size: 5em;
+  font-size: 4em;
   display: flex;
   color: white;
   background: black;
   font-family: "Wavemax";
+}
+
+.header {
+  background: none;
+  color: black;
 }
 
 
@@ -110,7 +113,7 @@ span {
   display: flex;
   margin: 2% auto;
   justify-content: center;
-  
+
 }
 
 button {
@@ -123,15 +126,17 @@ button:hover {
   color: rgb(255, 255, 255);
   background: rgb(0, 0, 0);
   border: groove 2px white;
-  box-shadow: 6px 6px 16px 16px #ffffffa6; 
+  box-shadow: 6px 6px 16px 16px #ffffffa6;
 }
 
-
+.bob {
+  background: lavender;
+}
 
 form {
   background: lavender;
   margin: auto ;
-  padding: 20px;
+  text-align: center;
 }
 
 form > button {
@@ -170,5 +175,5 @@ img {
 img:hover {
   border: ridge 3px #000;
 
-  box-shadow: 0 0 -6px 6px #000000; 
+  box-shadow: 0 0 -6px 6px #000000;
 }

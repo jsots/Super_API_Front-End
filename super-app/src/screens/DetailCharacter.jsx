@@ -25,7 +25,7 @@ export default function DetailCat() {
 
   return (
     <div>
-      <h1 className="header">{character.name}</h1>
+      <h1>{character.name}</h1>
       <div className="charImg">
         {character.images && <img src={character.images.lg} alt={character.name} />}
       </div>

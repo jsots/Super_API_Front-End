@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { getCharacters } from '../services/characters.js';
 import Character from '../components/Character.jsx';
-import characters from '../../public/characters.json'
+import characters from '../characters.json'
 
-git
 export default function Filters() {
   const [chars, setChars] = useState([])
   const [filter, setFilter] = useState([]);
@@ -220,7 +219,7 @@ export default function Filters() {
               <img src={char.images.lg} height="300px"></img>
              <br />
              {chars.map((char) => (
-        <Character key={char._id} char={char} />
+        <Character key={char.id} char={char} />
         ))}
               <p>{char.name} </p>
             </Character>

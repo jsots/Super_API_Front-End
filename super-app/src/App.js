@@ -3,6 +3,7 @@ import { Routes, Navigate, Route } from 'react-router-dom'
 import Home from "./screens/Home.jsx";
 import Nav from "./components/Nav.jsx";
 import Characters from "./screens/Characters.jsx";
+import Filters from './screens/Filters.jsx'
 import DetailCharacter from "./screens/DetailCharacter.jsx";
 import CreateCharacter from "./screens/CreateCharacter.jsx";
 import EditCharacter from "./screens/EditCharacter.jsx";
@@ -33,6 +34,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/characters" element={<Characters />} />
+        <Route path="/filters" element={<Filters />} />
+
         <Route path="/characters/:id" element={<DetailCharacter />} />
         <Route path="/add-character" element={<CreateCharacter />} />
         <Route path="/character/:id/edit" element={<EditCharacter />} />

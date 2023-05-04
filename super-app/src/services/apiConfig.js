@@ -3,7 +3,7 @@ import axios from "axios";
 let apiUrl;
 
 const apiUrls = {
-//   production: "www.api.com/railway/api", add the real URL
+  production: "https://superapiback-end-production.up.railway.app/",
   development: "http://127.0.0.1:3000/",
 };
 

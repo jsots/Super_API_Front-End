@@ -4,7 +4,9 @@
   background-attachment: fixed;
 }
 
-
+.home {
+  background: url('./source/xmen-page.png') repeat center fixed;
+}
 .form {
   position: sticky;
   height: 100vh;
@@ -22,7 +24,7 @@
 
 .links {
   display: flex;
-  background: black;
+  background: rgb(101, 255, 116);
   justify-content: space-between;
 }
 
@@ -42,16 +44,15 @@ nav a {
   top: 0;
   display: flex;
   font-family: "Wavemax";
-  color: white;
+  color: black;
   font-size: 1.75em;
   font-style: bold;
   text-decoration: none;
-  background: black;
 }
 
 a:hover {
   text-decoration-line: overline;
-  color:aqua;
+  color:rgb(255, 142, 242);
 }
 
 h4 {
@@ -157,6 +158,7 @@ form {
 form > button {
   display:grid;
   margin: auto;
+  margin-top: 15px;
   width: 31%;
   padding: 20px;
 }
@@ -165,6 +167,7 @@ form > button {
   font-size: 4rem;
   margin: auto;
   overflow: hidden;
+ 
 }
 
 

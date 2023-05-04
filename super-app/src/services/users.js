@@ -2,6 +2,7 @@ import api from './apiConfig';
 import jwtDecode from 'jwt-decode';
 
 
+
 export const signUp = async (credentials) => {
   try {
     const resp = await api.post('/sign-up', credentials)
@@ -45,7 +46,10 @@ export const changePassword = async (passwords, user) => {
 export const verifyUser = async () => {
   const token = localStorage.getItem('token')
   if (token) {
-    const res = await api.get('/verify')
+    const config = {
+      headers: { Authorization: `Bearer ${token}` }
+    }
+    const res = await api.get('/verify', config)
     return res.data
   }
   return false

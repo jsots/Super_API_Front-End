@@ -3,7 +3,7 @@ import axios from "axios";
 let apiUrl;
 
 const apiUrls = {
-//   production: "www.api.com/railway/api", add the real URL
+  production: "https://superapiback-end-production.up.railway.app/",
   development: "http://127.0.0.1:3000/",
 };
 
@@ -16,5 +16,18 @@ if (window.location.hostname === "localhost") {
 const api = axios.create({
   baseURL: apiUrl,
 });
+
+api.interceptors.request.use(
+  (config) => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => {
+    Promise.reject(error);
+  }
+);
 
 export default api;

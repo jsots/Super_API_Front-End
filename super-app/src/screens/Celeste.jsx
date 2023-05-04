@@ -42,8 +42,8 @@ function Celeste() {
       <div>
         <p>Jacquelyn Caputo</p>
         <img src="" width="200" height="200"></img>
-        <p>Heroname : Giggles</p>
-        <p>Favhero : Starfire</p>
+        <p>Hero Name : Giggles</p>
+        <p>Fav Hero : Starfire</p>
         <p>Powerstats</p>
         <ul>
           <li>Intelligence: 33</li>

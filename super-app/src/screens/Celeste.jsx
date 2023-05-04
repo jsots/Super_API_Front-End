@@ -42,19 +42,19 @@ function Celeste() {
       <div>
         <p>Jacquelyn Caputo</p>
         <img src="" width="200" height="200"></img>
-        <p>Heroname : Ashwaganda</p>
-        <p>Favhero : Star Fire</p>
+        <p>Heroname : Giggles</p>
+        <p>Favhero : Starfire</p>
         <p>Powerstats</p>
         <ul>
-          <li>Intelligence: 45</li>
-          <li>Strength: 55</li>
-          <li>Speed: 20</li>
-          <li>Durability: 62</li>
-          <li>Power: 80</li>
-          <li>Combat: 77</li>
+          <li>Intelligence: 33</li>
+          <li>Strength: 44</li>
+          <li>Speed: 19</li>
+          <li>Durability: 99</li>
+          <li>Power: 39</li>
+          <li>Combat: 62</li>
         </ul>
         <link href="https://github.com/professrx/">link to my github</link>
-        <p>work: Veterinarian </p>
+        <p>work: Cosmetic Chemist </p>
       </div>
 
       <div>

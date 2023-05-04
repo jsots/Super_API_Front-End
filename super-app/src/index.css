@@ -69,7 +69,7 @@ code {
  @font-face {
   font-family: "Exp";
   src: local("Exp"),
-   url("./fonts/Exp.ttf") format("truetype");
+   url("./fonts/Exp.otf") format("opentype");
  }
  @font-face {
   font-family: "Wavemax";

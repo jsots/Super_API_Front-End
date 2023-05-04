@@ -9,6 +9,13 @@ function Home() {
       document.body.classList.remove("home");
     };
   }, []);
+
+  return (
+    <>
+      <h1 id="home">Celeste's Supers!</h1>
+    </>
+  )
 }
+
 
 export default Home;

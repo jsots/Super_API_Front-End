@@ -215,15 +215,8 @@ export default function Filters() {
       <ul className="list">
         {filteredChars.length > 0 ? (
           filteredChars.map((char) => (
-            <Character key={char.id} onClick={() => handleCharClick(char.id)}>
-              <img src={char.images.lg} height="300px"></img>
-             <br />
-             {chars.map((char) => (
-        <Character key={char.id} char={char} />
-        ))}
-              <p>{char.name} </p>
-            </Character>
-          ))
+            <Character char={char} key={char._id} onClick={() => handleCharClick(char.id)} />
+            ))
         ) : (
           <div>No characters found</div>
         )}

@@ -176,7 +176,6 @@ export default function Filters() {
           <br />
           <label>
             <h4>Powerstats:</h4>
-            <br />
             Intelligence:
             <br />
 

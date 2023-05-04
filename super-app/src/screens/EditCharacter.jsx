@@ -55,80 +55,91 @@ export default function EditCat(props) {
 
   return (
     <div>
-      <h1>Edit the Super</h1>
+      <h1>Edit Character</h1>
       <form onSubmit={handleSubmit}>
+        Name:
         <input
-          placeholder="Enter your Super's name"
+          placeholder="Enter name"
           name="name"
           value={character.name}
           onChange={handleChange}
         />
         <br/>
+        Intelligence:
         <input
-          placeholder="Enter your Super's intelligence"
+          placeholder="Enter intelligence"
           name="intelligence"
           value={character.powerstats.intelligence}
           onChange={handleChange}
         />
         <br/>
+        Strength:
         <input
-          placeholder="Enter your Super's strength"
+          placeholder="Enter strength"
           name="strength"
           value={character.powerstats.strength}
           onChange={handleChange}
         />
         <br/>
+        Speed:
         <input
-          placeholder="Enter your Super's speed"
+          placeholder="Enter speed"
           name="speed"
           value={character.powerstats.speed}
           onChange={handleChange}
         />
         <br/>
+        Durability:
         <input
-          placeholder="Enter your Super's durability"
+          placeholder="Enter durability (0-100)"
           name="durability"
           value={character.powerstats.durability}
           onChange={handleChange}
         />
         <br/>
+        Power:
         <input
-          placeholder="Enter your Super's power"
+          placeholder="Enter power (0-100)"
           name="power"
           value={character.powerstats.power}
           onChange={handleChange}
         />
         <br/>
+        Combat:
         <input
-          placeholder="Enter your Super's combat"
+          placeholder="Enter combat (0-100)"
           name="combat"
           value={character.powerstats.combat}
           onChange={handleChange}
         />
         <br/>
+        Gender:
         <input
-          placeholder="Enter your Super's gender"
+          placeholder="Enter gender (Male/Female)"
           name="gender"
           value={character.appearance.gender}
           onChange={handleChange}
         />
         <br/>
+        Alignment:
         <input
-          placeholder="Enter your Super's alignment"
+          placeholder="Enter alignment (good/bad)"
           name="alignment"
           value={character.biography.alignment}
           onChange={handleChange}
         />
         <br/>
+        Publisher:
         <input
-          placeholder="Enter your Super's publisher"
+          placeholder="Publisher (Marvel Comics/DC Comics)"
           name="publisher"
           value={character.biography.publisher}
           onChange={handleChange}
         />
         <br/>
+        Image URL:
         <input
-          placeholder="Enter your Super's image"
+          placeholder="Enter image URL"
           name="image"
           value={character.images.lg}
           onChange={handleChange}

@@ -23,8 +23,7 @@ const unauthenticatedOptions = (
 const alwaysOptions = (
   <>
     <NavLink to="/">Home</NavLink>
-    <NavLink to="/characters">All Characters</NavLink>
-    <NavLink to="/filters">Filter Characters</NavLink>
+    <NavLink to="/filters">Characters</NavLink>
     <NavLink to="/Celeste">Meet Celeste</NavLink>
   </>
 );

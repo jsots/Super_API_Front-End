@@ -12,20 +12,19 @@
 }
 
 .detail {
-  background: rgba(246, 246, 246, 0.486)
-    url("https://i.ibb.co/khvVv41/popartBG.png") no-repeat fixed center;
-  background-size: 110%;
+  background: rgb(204, 255, 223);
+  background-size: 100%;
 }
 
 .links {
   display: flex;
-  background: rgb(101, 255, 116);
+  background: rgb(44, 44, 44);
   justify-content: space-between;
 }
 
 p {
-  font-size: 14px;
-  font-family: "Arial";
+  font-size: 20px;
+  font-family: "porky";
 }
 
 nav {
@@ -34,12 +33,15 @@ nav {
   position: sticky;
 }
 
+
+
+
 nav a {
   padding: 10px 50px 10px 50px;
   top: 0;
   display: flex;
   font-family: "Wavemax";
-  color: black;
+  color: white;
   font-size: 1.75em;
   font-style: bold;
   text-decoration: none;
@@ -65,14 +67,17 @@ h1 {
   justify-content: center;
   align-content: center;
   width: 100%;
-  font-size: 4em;
+  font-size: 3em;
   display: flex;
   color: white;
   background: black;
-  font-family: "Wavemax";
+  font-family: "porky2";
 }
 
+
 .header {
+  font-family: "Courier";
+  font-size: 2.5em;
   background: none;
   color: black;
 }
@@ -156,11 +161,36 @@ form > button {
   padding: 20px;
 }
 
+/* .celeste > h4 {
+  display: flex;
+  justify-content: left;
+} */
+
+.celeste {
+  display: flex;
+  margin: auto;
+  justify-content: space-evenly;
+ gap: 10px; 
+  flex-direction: row;
+}
+.navbar__menu {
+  display: none; /* hide the menu by default */
+}
+
+h3 {
+  display: flex;
+  font-size: 24px;
+  justify-content: center;
+  font-family: "Corp";
+}
+
 #home {
   display: flex;
-  justify-content: center;
+  position: absolute;
+  top: 40%;
+  margin-top: 50%;
   align-items: center;
-  font-size: 4rem;
+  font-size: 10em;
   margin: auto;
   overflow: hidden;
 }
@@ -198,4 +228,33 @@ img:hover {
 .characterList:hover {
   transform: scale(1.04);
   transition: transform 0.4s ease-in-out;
+}
+.navbar{
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+
+  .navbar {
+    position: fixed;
+    top: 60px;
+    left: -200px;
+    width: 200px;
+    height: calc(100% - 60px);
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  /* show the menu when the viewport is less than 700px */
+
+  .navbar__menu--open {
+    transform: translateX(200px);
+  }
+
+  .navbar__hamburger {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
 }

@@ -6,7 +6,8 @@ function Home() {
     document.body.classList.add("home");
 
     return () => {
-      document.body.classList.remove("home");
+
+      document.body.classList.remove("home")
     };
   }, []);
 

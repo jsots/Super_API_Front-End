@@ -23,6 +23,16 @@ export default function Filters() {
   };
 
   useEffect(() => {
+    document.body.classList.add("detail");
+
+    return () => {
+
+      document.body.classList.remove("detail")
+    };
+  }, []);
+
+
+  useEffect(() => {
     fetchChars();
   }, []);
 

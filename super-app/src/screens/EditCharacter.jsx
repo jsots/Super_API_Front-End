@@ -83,7 +83,7 @@ export default function EditCat(props) {
         <br />
         Intelligence:
         <input
-          placeholder="Enter intelligence"
+          placeholder="Enter intelligence (0-100)"
           name="intelligence"
           value={character.powerstats.intelligence}
           onChange={handleChange}
@@ -91,7 +91,7 @@ export default function EditCat(props) {
         <br />
         Strength:
         <input
-          placeholder="Enter strength"
+          placeholder="Enter strength (0-100)"
           name="strength"
           value={character.powerstats.strength}
           onChange={handleChange}
@@ -99,7 +99,7 @@ export default function EditCat(props) {
         <br />
         Speed:
         <input
-          placeholder="Enter speed"
+          placeholder="Enter speed (0-100)"
           name="speed"
           value={character.powerstats.speed}
           onChange={handleChange}

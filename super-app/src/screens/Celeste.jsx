@@ -5,11 +5,7 @@ function Celeste() {
 
       <div>
         <p>Justin Sotolongo</p>
-        <img
-          src=""
-          width="200"
-          height="200"
-        ></img>
+        <img src="" width="200" height="200"></img>
         <p>Hero Name: Agentgay</p>
         <p>Fav Hero : Raven</p>
         <p>Powerstats</p>
@@ -27,11 +23,7 @@ function Celeste() {
 
       <div>
         <p>Lissa Warshaw</p>
-        <img
-          src=""
-          width="200"
-          height="200"
-        ></img>
+        <img src="" width="200" height="200"></img>
         <p>Hero Name : Luminous Lissa</p>
         <p>Fav Hero : Andy Cohen</p>
         <p>Powerstats</p>
@@ -49,11 +41,7 @@ function Celeste() {
 
       <div>
         <p>Jacquelyn Caputo</p>
-        <img
-          src=""
-          width="200"
-          height="200"
-        ></img>
+        <img src="" width="200" height="200"></img>
         <p>Heroname : Ashwaganda</p>
         <p>Favhero : Star Fire</p>
         <p>Powerstats</p>
@@ -71,11 +59,7 @@ function Celeste() {
 
       <div>
         <p>Michael Christenson</p>
-        <img
-          src=""
-          width="200"
-          height="200"
-        ></img>
+        <img src="" width="200" height="200"></img>
         <p>Hank Chinaski</p>
         <p>Favhero</p>
         <p>Powerstats</p>
@@ -93,11 +77,7 @@ function Celeste() {
 
       <div>
         <p>Agustines Sudibya</p>
-        <img
-          src=""
-          width="200"
-          height="200"
-        ></img>
+        <img src="" width="200" height="200"></img>
         <p>Simu Liu,</p>
         <p>Shang-Chi</p>
         <p>Powerstats</p>

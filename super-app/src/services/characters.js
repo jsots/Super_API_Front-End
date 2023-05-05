@@ -10,6 +10,16 @@ export const getCharacters = async () => {
   }
 };
 
+export const getFilters = async () => {
+  try {
+    const response = await api.get("/filters");
+    return response.data;
+  } catch (error) {
+    console.error(`Failed to get characters - error: ${error}`);
+    throw error;
+  }
+};
+
 export const getCharacter = async (id) => {
   try {
     const response = await api.get(`/characters/${id}`);

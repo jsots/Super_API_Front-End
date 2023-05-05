@@ -2,6 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import './fonts/ActionComBlk.ttf'
+import './fonts/ActionComLine.ttf'
+import './fonts/Comic.ttf'
+import './fonts/Grinch.otf'
+import './fonts/porky.ttf'
+import './fonts/porky2.ttf'
+import './fonts/Darling.ttf'
+import './fonts/Exp.ttf'
+import './fonts/Corp.ttf'
+import './fonts/Wavemax.ttf'
+import './fonts/Bad.ttf'
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from "react-router-dom";
 

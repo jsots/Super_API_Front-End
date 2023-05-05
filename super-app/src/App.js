@@ -2,11 +2,10 @@ import { useState, useEffect } from "react";
 import { Routes, Navigate, Route } from "react-router-dom";
 import Home from "./screens/Home.jsx";
 import Nav from "./components/Nav.jsx";
-import Characters from "./screens/Characters.jsx";
+import Filters from './screens/Filters.jsx'
 import DetailCharacter from "./screens/DetailCharacter.jsx";
 import CreateCharacter from "./screens/CreateCharacter.jsx";
 import EditCharacter from "./screens/EditCharacter.jsx";
-import Sidebar from "./components/Sidebar.jsx";
 import Celeste from "./screens/Celeste.jsx";
 import SignIn from "./screens/SignIn.jsx";
 import SignUp from "./screens/SignUp.jsx";
@@ -35,7 +34,7 @@ function App() {
         <Nav user={user} handleSignOut={handleSignOut} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/characters" element={<Characters />} />
+          <Route path="/characters" element={<Filters />} />
           <Route path="/characters/:id" element={<DetailCharacter />} />
           <Route path="/add-character" element={<CreateCharacter />} />
           <Route path="/character/:id/edit" element={<EditCharacter />} />

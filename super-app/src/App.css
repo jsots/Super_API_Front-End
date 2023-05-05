@@ -1,79 +1,87 @@
-.chars {
-  background: url("https://i.ibb.co/yqVPLgz/rainbow-Glow.png") no-repeat left;
-  background-size: 100%;
-  background-attachment: fixed;
+.home {
+  background: url("./images/xmen-page.png") repeat center fixed;
+}
+.form {
+  position: sticky;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
 }
 
 .detail {
-  background: rgba(246, 246, 246, 0.486) url("https://i.ibb.co/khvVv41/popartBG.png") no-repeat fixed center;
+  background: rgba(246, 246, 246, 0.486)
+    url("https://i.ibb.co/khvVv41/popartBG.png") no-repeat fixed center;
   background-size: 110%;
 }
 
 .links {
   display: flex;
-  background: black;
+  background: rgb(101, 255, 116);
   justify-content: space-between;
 }
 
 p {
-  font-size: 24px;
+  font-size: 14px;
   font-family: "Arial";
 }
 
 nav {
-  overflow: hidden;
   width: 100%;
+  overflow: hidden;
+  position: sticky;
 }
 
 nav a {
-  padding-top: 10px;
+  padding: 10px 50px 10px 50px;
+  top: 0;
   display: flex;
   font-family: "Wavemax";
-  color: white;
-  font-size: 1.5em;
+  color: black;
+  font-size: 1.75em;
   font-style: bold;
   text-decoration: none;
-  background: black;
-  padding-left: 50px;
-  padding-right: 50px;
 }
 
 a:hover {
   text-decoration-line: overline;
-  color:aqua;
+  color: rgb(255, 142, 242);
 }
 
 h4 {
   display: flex;
-  margin: 0 50% 0 50%;
-  font-size: 1.75em;
-  font-weight:400;
-  font-family: "Exp";
   justify-content: center;
+  font-size: 1.25rem;
+  font-family: "Exp";
+}
+
+select {
+  width: 80%;
 }
 
 h1 {
-  display: flex;
   justify-content: center;
   align-content: center;
   width: 100%;
-  font-size: 5em;
+  font-size: 4em;
   display: flex;
   color: white;
   background: black;
   font-family: "Wavemax";
 }
 
+.header {
+  background: none;
+  color: black;
+}
 
 .list {
+  overflow: auto;
   display: grid;
-  margin: 0 auto;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-area: 1 / 4 / 3 / 5;
   grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  max-width: 75vw;
-
 }
 
 .charImg {
@@ -84,23 +92,28 @@ h1 {
   width: 100%;
 }
 
-button {
-  height: 10%;
-  margin: 0 auto;
-  justify-content: center;
-  width: 30%;
-  margin-bottom:0 ;
-  padding: 15px;
-}
-
-span {
+.detailBtns {
   display: flex;
-  margin: 2% auto;
-  justify-content: center;
-  
+  justify-content: space-between;
+  margin: 10px auto;
+  width: 75%;
+}
+
+.detailBtn {
+  display: flex;
+  justify-content: space-around;
+  min-width: 45%;
+  max-width: 55%;
 }
 
 button {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-content: center;
+  text-align: center;
+  width: 20%;
+  padding: 15px;
   background: black;
   color: white;
   border: ridge 2px white;
@@ -110,43 +123,76 @@ button:hover {
   color: rgb(255, 255, 255);
   background: rgb(0, 0, 0);
   border: groove 2px white;
-  box-shadow: 6px 6px 16px 16px #ffffffa6; 
+  box-shadow: 6px 6px 16px 16px #ffffffa6;
+}
+
+.bob {
+  background: lavender;
+}
+
+.signup {
+  width: 100%;
+  overflow: hidden;
+}
+
+.signin {
+  width: 100%;
+  overflow: hidden;
 }
 
 form {
   background: lavender;
-  margin: auto ;
-  padding: 20px;
+  min-width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0 20px 0;
 }
 
 form > button {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
+  display: grid;
+  margin: auto;
+  margin-top: 15px;
   width: 31%;
   padding: 20px;
+}
+
+#home {
+  font-size: 4rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+.characterList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
 }
 
 form > input {
   background: rgba(187, 255, 187, 0.798);
   display: flex;
-  margin: auto ;
+  margin: auto;
   font-size: 1em;
   padding: 5px;
   width: 30%;
 }
 
 img {
-  border:groove 3px #000;
-  box-shadow:6px 6px 6px -6px #000000;
+  border: groove 3px #000;
+  box-shadow: 6px 6px 6px -6px #000000;
   display: flex;
   justify-content: center;
   align-content: center;
-
+  border-radius: 10px;
 }
 
 img:hover {
   border: ridge 3px #000;
+  box-shadow: 12px 12px -12px 12px #000000;
+}
 
-  box-shadow: 0 0 -6px 6px #000000; 
+.characterList:hover {
+  transform: scale(1.04);
+  transition: transform 0.4s ease-in-out;
 }

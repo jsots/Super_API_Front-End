@@ -112,18 +112,6 @@ export default function Filters() {
     return true;
   });
 
-  // const handleCharClick = (heroId) => {
-  //   setChars(prevChars => {
-  //     const heroIndex = prevChars.findIndex(char => char._id === heroId);
-  //     const updatedChar = {...prevChars[heroIndex], selected: true};
-  //     return [
-  //       ...prevChars.slice(0, heroIndex),
-  //       updatedChar,
-  //       ...prevChars.slice(heroIndex + 1),
-  //     ];
-  //   });
-  // };
-
   return (
     <>
       <container className="container">

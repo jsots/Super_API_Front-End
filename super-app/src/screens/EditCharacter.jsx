@@ -42,6 +42,22 @@ export default function EditCat(props) {
 
     setCharacter((prev) => ({
       ...prev,
+      powerstats: {
+        ...prev.powerstats,
+        [name]: value
+      },
+      appearance: {
+        ...prev.appearance,
+        [name]: value
+      },
+      biography: {
+        ...prev.biography,
+        [name]: value
+      },
+      images: {
+        ...prev.images,
+        [name]: value
+      },
       [name]: value,
     }));
   };
@@ -140,7 +156,7 @@ export default function EditCat(props) {
         Image URL:
         <input
           placeholder="Enter image URL"
-          name="image"
+          name="images"
           value={character.images.lg}
           onChange={handleChange}
         />

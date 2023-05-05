@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const authenticatedOptions = (
   <>
-    <NavLink to="/add-character">New Character</NavLink>
+    <NavLink to="/add-character">New Super</NavLink>
     <NavLink className="link" to="/signout">
       Sign Out
     </NavLink>
@@ -23,7 +23,7 @@ const unauthenticatedOptions = (
 const alwaysOptions = (
   <>
     <NavLink to="/">Home</NavLink>
-    <NavLink to="/filters">Characters</NavLink>
+    <NavLink to="/characters">Supers</NavLink>
     <NavLink to="/Celeste">Meet Celeste</NavLink>
   </>
 );

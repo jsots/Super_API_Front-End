@@ -13,7 +13,7 @@ This application will allow the user to create their own Supers, edit existing o
 
 ### Create
 
-The user will be able to create a Super so long as they provide a name, image, and powerstats! They will do so by fillinw out the form below:
+The user will be able to create a Super so long as they provide a name, image, and powerstats! They will do so by filling out the form below:
 
 [insert image here]
 
@@ -43,6 +43,12 @@ The user will be able to update the individual Super's profiles. Additionally, t
 ## Delete
 
 The user will be able to delete the individual Super's profiles. Additionally, they will be able to delete their teams and profiles. 
+
+---
+---
+## Long Term Goal
+
+Our long term goal for this project is to incorporate and create Transheroes DreamTeam, a comprehensive platform that goes beyond just creating and managing user-generated Supers. With Transheroes DreamTeam, users will have access to a vast database of Supers from various franchises, allowing them to search for Supers by name, publisher, and other attributes, as well as view their detailed profiles and combat stats. Our aim is to create the ultimate platform for Super fans to explore, create, and share their favorite Supers with the world, while also fostering a community of like-minded individuals who are passionate about the world of Supers.
 
 ---
 ---

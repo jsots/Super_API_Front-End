@@ -32,7 +32,23 @@ export default function CreateCharacter() {
 
     setCharacter((prev) => ({
       ...prev,
-      [name]: value,
+      powerstats: {
+        ...prev.powerstats,
+        [name]: value
+      },
+      appearance: {
+        ...prev.appearance,
+        [name]: value
+      },
+      biography: {
+        ...prev.biography,
+        [name]: value
+      },
+      images: {
+        ...prev.images,
+        [name]: value
+      },
+      [name]: value
     }));
   };
 
@@ -44,7 +60,7 @@ export default function CreateCharacter() {
 
   return (
     <div>
-      <h1>Create a Character</h1>
+      <h1>Create a Super</h1>
       <form onSubmit={handleSubmit}>
         <input
           placeholder="Enter your character's name"
@@ -118,7 +134,7 @@ export default function CreateCharacter() {
         <br />
         <input
           placeholder="Enter image URL"
-          name="image"
+          name="images"
           value={character.images.lg}
           onChange={handleChange}
         />

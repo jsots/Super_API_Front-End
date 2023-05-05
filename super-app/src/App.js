@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Routes, Navigate, Route } from "react-router-dom";
+import axios from 'axios';
 import Home from "./screens/Home.jsx";
 import Nav from "./components/Nav.jsx";
 import Filters from './screens/Filters.jsx'
@@ -12,6 +13,7 @@ import SignUp from "./screens/SignUp.jsx";
 import SignOut from "./screens/SignOut.jsx";
 import { verifyUser } from "./services/users";
 import "./App.css";
+
 
 function App() {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')));
@@ -28,7 +30,7 @@ function App() {
     setUser(null);
     localStorage.removeItem("user");
   };
-
+    
     return (
       <div>
         <Nav user={user} handleSignOut={handleSignOut} />

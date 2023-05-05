@@ -6,8 +6,6 @@ function Home() {
   const alwaysOptions = (
     <>
       <NavLink className="nav-link" to="/characters">All Supers</NavLink>
-      <NavLink className="nav-link" to="/sign-up">Sign-up</NavLink>
-      <NavLink className="nav-link" to="/sign-in">Sign-in</NavLink>
       <NavLink className="nav-link" to="/Celeste">Meet Celeste</NavLink>
     </>
   );

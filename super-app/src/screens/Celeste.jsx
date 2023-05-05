@@ -1,14 +1,17 @@
+import { Link } from 'react-router-dom'
+
 function Celeste() {
   return (
-    <div>
-      <h1> Meet the team! </h1>
+    <>
+    <h1> Meet the team! </h1>
+    <div className="celeste">
 
       <div>
-        <p>Justin Sotolongo</p>
+        <h3>Justin Sotolongo</h3>
         <img src="" width="200" height="200"></img>
         <p>Hero Name: Agentgay</p>
-        <p>Fav Hero : Raven</p>
-        <p>Powerstats</p>
+        <p>Fav Hero: Raven</p>
+        <p>Powerstats:</p>
         <ul>
           <li>Intelligence:60</li>
           <li>Strength:10</li>
@@ -17,16 +20,16 @@ function Celeste() {
           <li>Power:5</li>
           <li>Combat:0</li>
         </ul>
-        <link href="https://github.com/jsots">link to github</link>
+        <a href="https://github.com/jsots">github</a>
         <p>work: code czar </p>
       </div>
 
       <div>
-        <p>Lissa Warshaw</p>
+        <h3>Lissa Warshaw</h3>
         <img src="" width="200" height="200"></img>
-        <p>Hero Name : Luminous Lissa</p>
-        <p>Fav Hero : Andy Cohen</p>
-        <p>Powerstats</p>
+        <p>Hero Name: Luminous Lissa</p>
+        <p>Fav Hero: Andy Cohen</p>
+        <p>Powerstats:</p>
         <ul>
           <li>Intelligence:40</li>
           <li>Strength:80</li>
@@ -35,34 +38,34 @@ function Celeste() {
           <li>Power:100</li>
           <li>Combat:10</li>
         </ul>
-        <link href="https://github.com/lissashea">link to my github</link>
-        <p>Work: GA Software Engineer Student </p>
+        <a href="https://github.com/lissashea">github</a>
+        <p>work: GA Software Engineer Student </p>
       </div>
 
       <div>
-        <p>Jacquelyn Caputo</p>
+        <h3>Jacquelyn Caputo</h3>
         <img src="" width="200" height="200"></img>
-        <p>Heroname : Ashwaganda</p>
-        <p>Favhero : Star Fire</p>
-        <p>Powerstats</p>
+        <p>Hero Name: Giggles</p>
+        <p>Fav Hero: Starfire</p>
+        <p>Powerstats:</p>
         <ul>
-          <li>Intelligence: 45</li>
-          <li>Strength: 55</li>
-          <li>Speed: 20</li>
-          <li>Durability: 62</li>
-          <li>Power: 80</li>
-          <li>Combat: 77</li>
+          <li>Intelligence: 33</li>
+          <li>Strength: 44</li>
+          <li>Speed: 19</li>
+          <li>Durability: 99</li>
+          <li>Power: 39</li>
+          <li>Combat: 62</li>
         </ul>
-        <link href="https://github.com/professrx/">link to my github</link>
-        <p>work: Veterinarian </p>
+        <a href="https://github.com/professrx/">github</a>
+        <p>work: korw </p>
       </div>
 
       <div>
-        <p>Michael Christenson</p>
+        <h3>Michael Christenson</h3>
         <img src="" width="200" height="200"></img>
         <p>Hank Chinaski</p>
-        <p>Favhero</p>
-        <p>Powerstats</p>
+        <p>Fav Hero: Mom</p>
+        <p>Powerstats:</p>
         <ul>
           <li>Intelligence: 95</li>
           <li>Strength: 2</li>
@@ -71,16 +74,16 @@ function Celeste() {
           <li>Power: 2 </li>
           <li>Combat:25</li>
         </ul>
-        <link href="https://github.com/mcchris1">link to my github</link>
+        <a href="https://github.com/mcchris1">github</a>
         <p>work: D-Girl/Group Inclusion Specialist</p>
       </div>
 
       <div>
-        <p>Agustines Sudibya</p>
+        <h3>Agustines Sudibya</h3>
         <img src="" width="200" height="200"></img>
         <p>Simu Liu,</p>
         <p>Shang-Chi</p>
-        <p>Powerstats</p>
+        <p>Powerstats:</p>
         <ul>
           <li>Intelligence: 77</li>
           <li>Strength: 90</li>
@@ -89,10 +92,11 @@ function Celeste() {
           <li>Power: 50</li>
           <li>Combat: 99</li>
         </ul>
-        <link href="https://github.com/ksudibya">link to my github</link>
+        <a href="https://github.com/ksudibya">github</a>
         <p>work: Software Engineer</p>
       </div>
     </div>
+    </>
   );
 }
 

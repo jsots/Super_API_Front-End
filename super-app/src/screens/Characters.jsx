@@ -17,6 +17,15 @@ export default function Characters() {
     fetchChars();
   }, []);
 
+  useEffect(() => {
+    document.body.classList.add("detail");
+
+    return () => {
+
+      document.body.classList.remove("detail")
+    };
+  }, []);
+
   const handleSort = (type) => {
     setSortType(type);
 

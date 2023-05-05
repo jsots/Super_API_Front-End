@@ -36,7 +36,7 @@ function App() {
         <Nav user={user} handleSignOut={handleSignOut} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/characters" element={<Filters />} />
+          <Route path="/filters" element={<Filters />} />
           <Route path="/characters/:id" element={<DetailCharacter />} />
           <Route path="/add-character" element={<CreateCharacter />} />
           <Route path="/character/:id/edit" element={<EditCharacter />} />

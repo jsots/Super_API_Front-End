@@ -1,4 +1,8 @@
 import {Link} from "react-router-dom"
+import lissa from "../images/Lissa.jpg"
+import Agustines from "../images/Agustines.jpeg"
+import Miguel from "../images/mcjobs.jpeg"
+// import jacky from "../images/jacky"
 
 function Celeste() {
   return (
@@ -7,7 +11,7 @@ function Celeste() {
 
       <div>
         <p>Justin Sotolongo</p>
-        {/* <img src="" width="200" height="200"></img> */}
+        <img src="https://media.licdn.com/dms/image/C4E03AQGnDeZaX0A7sA/profile-displayphoto-shrink_400_400/0/1581538564313?e=1688601600&v=beta&t=ZEa_XGxw1cPGS5rVstc3ayUsvzTVMzD0DTTOzwvTtI4" width="200" height="200"></img>
         <p>Hero Name: Agentgay</p>
         <p>Fav Hero : Raven</p>
         <p>Powerstats</p>
@@ -25,7 +29,7 @@ function Celeste() {
 
       <div>
         <p>Lissa Warshaw</p>
-        {/* <img src="" width="200" height="200"></img> */}
+        <img src={lissa} width="200" height="200"></img>
         <p>Hero Name : Luminous Lissa</p>
         <p>Fav Hero : Andy Cohen</p>
         <p>Powerstats</p>
@@ -43,7 +47,7 @@ function Celeste() {
 
       <div>
         <p>Jacquelyn Caputo</p>
-        {/* <img src="" width="200" height="200"></img> */}
+        <img src="https://ca.slack-edge.com/T0351JZQ0-U04NXM05U78-a60f345679c3-512" width="200" height="200"></img>
         <p>Heroname : Ashwaganda</p>
         <p>Favhero : Star Fire</p>
         <p>Powerstats</p>
@@ -61,7 +65,7 @@ function Celeste() {
 
       <div>
         <p>Michael Christenson</p>
-        {/* <img src="" width="200" height="200"></img> */}
+        <img src={Miguel} width="200" height="200"></img>
         <p>Hank Chinaski</p>
         <p>Favhero</p>
         <p>Powerstats</p>
@@ -79,7 +83,7 @@ function Celeste() {
 
       <div>
         <p>Agustines Sudibya</p>
-        {/* <img src="" width="200" height="200"></img> */}
+        <img src={Agustines} width="200" height="200"></img>
         <p>Simu Liu,</p>
         <p>Shang-Chi</p>
         <p>Powerstats</p>

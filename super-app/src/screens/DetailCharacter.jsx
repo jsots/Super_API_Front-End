@@ -39,7 +39,7 @@ export default function DetailCat() {
           className="detailBtn"
           onClick={() => {
             deleteCharacter(character._id);
-            navigate("/character", { replace: true });
+            navigate("/characters", { replace: true });
           }}
         >
           Delete Character
